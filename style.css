@@ -1,0 +1,439 @@
+* {
+  marging: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  /* color: #fff; */
+}
+.header {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(./img/zodiaco.PNG);
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  width: 53px;
+}
+.links-nav {
+  flex: 1;
+  text-align: right;
+}
+.links-nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.links-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+.links-nav ul li ::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.links-nav ul li :hover::after {
+  width: 100%;
+}
+.caixa-texto {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.caixa-texto h1 {
+  font-size: 62px;
+}
+.caixa-texto p {
+  margin: 10px 0px 40px;
+  font-size: 20px;
+  color: #fff;
+  padding-top: 3%;
+}
+
+.botao-heroi {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.botao-heroi:hover {
+  border: 1px solid #f44336;
+  background-color: #f44336;
+  transition: 1s;
+}
+nav .fa {
+  display: none;
+}
+@media (max-width: 700px) {
+  .caixa-texto {
+    font-size: 17;
+  }
+  .links-nav ul li {
+    display: block;
+  }
+  .links-nav {
+    position: absolute;
+    background: #f33446;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+  nav .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .links-nav ul li {
+    padding: 30px;
+  }
+}
+/* -- --- -Servicos- -- - */
+
+.servicos {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+.h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: black;
+}
+.p {
+  color: #777;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 10px;
+}
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.row2 {
+  display: inline-block;
+  margin-top: 5%;
+  /* display: flex; */
+  justify-content: space-between;
+  padding-left: 5px;
+}
+.row3 {
+  align-items: start;
+  display: flex;
+  margin-bottom: 6%;
+  justify-content: space-around;
+  padding-left: 5px;
+  /* width: 92%; */
+  flex-basis: 40%;
+}
+.servicos-col {
+  flex-basis: 31%;
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 19px 10px;
+  box-sizing: border-boxx;
+  transition: 0.5s;
+}
+h3 {
+  color: #080808;
+  text-align: center;
+  font-weight: 00;
+  margin: 10px 0;
+}
+.servicos-col:hover {
+  box-shadow: 0 0 20px 0;
+}
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+/* ---- -campus -----  */
+.campus {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  padding-top: 12px;
+}
+.campus-col {
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.campus-col img {
+  width: 100%;
+  display: block;
+}
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.layer:hover {
+  background: rgba(226, 0, 0, 0.7);
+}
+
+.layer H3 {
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+/* - -- - -- facilities- - ---  */
+.facilities {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.facilities-col {
+  flex-basis: 31%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+}
+.facilities-col img {
+  width: 100%;
+  border-radius: 10px;
+}
+.facilities-col p {
+  padding: 0;
+}
+.facilities-col h3 {
+  margin-top: 16px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* ------terSTIMONIAIS---- */
+
+.testimoniais {
+  flex-basis: 44%;
+  width: 100%;
+  margin: auto;
+  padding-top: 59px;
+  text-align: center;
+}
+.testimoniais H1 {
+  font-size: 25px;
+  background-color: TRANSPARENT;
+}
+
+.testimonial-col {
+  height: 245px;
+  flex-basis: 44%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  text-align: left;
+  background: #fff3f3;
+  padding: 25px;
+  cursor: pointer;
+  display: outside;
+}
+
+.testimonial-col img {
+  height: 40px;
+  margin-left: 5%;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+
+.testimonial-col p {
+  padding: 0;
+}
+
+.testimonial-col h3 {
+  margin-top: 25px;
+  text-align: left;
+}
+.testimonial-col .fa {
+  color: #151515;
+}
+
+@media (max-width: 700px) {
+  .testimonial-col {
+    flex-basis: auto;
+    align-items: center;
+    height: 500px;
+    margin: 20px auto;
+    display: flow-root;
+    padding: 10px;
+  }
+  .testimonial-col img {
+    margin-left: 0%;
+    margin-right: 15px;
+    display: list-item;
+  }
+}
+
+/* - --- -- -- CTA - --- ---  */
+.cta {
+  margin: 100px auto;
+  width: 80%;
+  height: 232px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./img/universo.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+}
+.cta h1 {
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+  padding-top: 29px;
+}
+.cta h1 strong {
+  color: #f44336;
+}
+@media (max-width: 700px) {
+  .cta h1 {
+    font-size: 24px;
+
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+    padding-top: 29px;
+  }
+}
+
+/* -- ---- --footer - - --- -- */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+.footer h4 {
+  width: 100%;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.icones ul {
+  padding-left: 122px;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  flex-basis: auto;
+}
+.icones ul li {
+  padding-left: 20px;
+}
+
+.icones .fa {
+  color: #f33446;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}
+.fa-heart-o {
+  color: #f44336;
+}
+.quadro {
+  display: flex;
+  justify-content: center;
+}
+.quadro:hover {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 0 0 20px 0;
+}
+
+/* ---- --- -- -- sobrenós -----  */
+.cabecalhoMenor {
+  height: 75vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url("../universidade/img/background2.png");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+.cabecalhoMenor h1 {
+  margin-top: 100px;
+}
+
+/* --------about us ------- */
+
+.about-us {
+  width: 80%;
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.about-col {
+  flex-basis: 48%;
+  padding: 30px 2px;
+}
+.about-col img {
+  width: 100%;
+}
+
+.about-col p {
+  padding: 15px 0 25px;
+}
+
+.botao-red {
+  border: 1px solid #f44336;
+  background: transparent;
+  color: #f44336;
+}
+
+.botao-red:hover {
+  color: #fff;
+}
